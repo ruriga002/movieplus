@@ -1,0 +1,44 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Boys",
+      "director": "Philip Sgriccia",
+      "year": 2019,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6sh-fSNhWGnLXTavhG_1r1XXWKVL3jWq42ZUa9j0F-Jb7Zsf",
+      "description": "The Boys is an American superhero television series developed by Eric Kripke for Amazon Prime Video. It is based on the comic book of the same name by Garth Ennis and Darick Robertson. The series follows a group of vigilantes who set out to take down corrupt superheroes who abuse their powers."
+    },
+    {
+      "id": 2,
+      "title": "The Matrix",
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "year": 1999,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DoFtShSmClflZ0RzBj9JBMweU5IUVBCeEbbLeV2XPlCnTKNi",
+      "description": "The Matrix is a science fiction action film written and directed by the Wachowskis. It depicts a dystopian future in which humanity is unknowingly trapped inside a simulated reality created by intelligent machines to distract humans while using their bodies as an energy source. The film follows a computer programmer named Neo who discovers the truth and joins a rebellion against the machines."
+    },
+    {
+      "id": 3,
+      "title": "The Invisible",
+      "director": "David S. Goyer",
+      "year": 2007,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8EsMl2BX9CBsgxZ2HA0xnnle5gPWJyw5-Ee-S1pg6z7vb03uY",
+      "description": "The Invisible is a supernatural thriller film directed by David S. Goyer. It follows a high school student named Nick who is attacked and left for dead, only to discover that he has become invisible. As he tries to find out who attacked him and why, he must also navigate the challenges of being invisible and the dangers that come with it."
+    },
+    {
+      "id": 4,
+      "title": "Reacher",
+      "director": "Sam Hill",
+      "year": 2022,
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSYGgVt8OsPM7D39_UhPuVnwGyuTt4eJ4OoXm-vnWwGBS2-NSAO",
+      "description": "Reacher is an American action thriller television series developed by Nick Santora for Amazon Prime Video. It is based on the Jack Reacher book series by Lee Child. The series follows Jack Reacher, a former military police officer who travels across the United States, getting involved in various dangerous situations and helping those in need."
+    },
+    {
+      "id": 5,
+      "title": "The Witcher",
+      "director": "Lauren Schmidt Hissrich",
+      "year": 2019,
+      "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTNNGFmvY5-pDEUVEDTBrAORhP8GZ85OCNX69Q0ILjY8gRnc_Bq",
+      "description": "The Witcher is a fantasy drama television series developed by Lauren Schmidt Hissrich for Netflix. It is based on the book series of the same name by Andrzej Sapkowski. The series follows Geralt of Rivia, a monster hunter known as a Witcher, as he navigates a world filled with magic, political intrigue, and dangerous creatures."
+    }
+  ]
+}
