@@ -83,3 +83,55 @@
 a {
     text-decoration: none;
 }
+
+/* review-card */
+.review-card {
+    background: #1C1C2E;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid #2D2D44;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.review-avatar {
+    background: #3B82F6;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-username {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.review-date {
+    font-size: 12px;
+    color: #6B7280;
+    margin-left: auto;
+}
+
+.review-stars {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.review-comment {
+    font-size: 13px;
+    color: #9CA3AF;
+    line-height: 1.6;
+}
