@@ -1,16 +1,64 @@
-# React + Vite
+# MoviePlus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie browsing web app built with React and JSON Server. Search for movies, view details, leave reviews, rate films, and save your favourites.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## App Features
 
-## React Compiler
+- Search and filter movies by genre
+- View full movie details
+- Rate and review movies
+- Add movies to your favourites
+- User login system
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- React Router DOM
+- JSON Server (mock backend)
+- CSS (no frameworks)
+
+---
+
+## Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/jaybkaugi78-tech/movieplus.git
+cd movieplus
+```
+
+### 2. Install the dependencies
+```bash
+npm install
+```
+
+### 3. Start JSON Server (mock backend)
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+### 4. Start the app (new terminal)
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173`
+
+---
+
+## Test Accounts
+| Username | Email | Password |
+|----------|-------|----------|
+| jay | jay@movieplus.com | jay123 |
+| millie | millie@movieplus.com | millie123 |
+| alex | alex@movieplus.com | alex123 |
+
+---
+
+## Team
+
+Built by the amazing MoviePlus team at Moringa School.
