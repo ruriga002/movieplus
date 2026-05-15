@@ -27,7 +27,7 @@ function Login({ setCurrentUser }) {
   return (
     <div className="login-page">
       <div className="login-box">
-        <h1>🎬 MoviePlus</h1>
+        <h1>MoviePlus</h1>
         <h2>Sign In</h2>
 
         {error && <p className="login-error">{error}</p>}
@@ -47,10 +47,7 @@ function Login({ setCurrentUser }) {
         <button onClick={handleLogin}>Login</button>
 
         <div className="login-hint">
-          <p>Test accounts:</p>zzz
-          <p>jay@movieplus.com / jay123</p>
-          <p>millie@movieplus.com / millie123</p>
-          <p>alex@movieplus.com / alex123</p>
+          
         </div>
       </div>
     </div>
