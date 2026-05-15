@@ -10,3 +10,5 @@ function Searchbar({ query, setQuery}) {
         </div>
     );
 }
+
+export default Searchbar;
