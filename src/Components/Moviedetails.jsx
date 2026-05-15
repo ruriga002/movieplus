@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import Review from "./Review";
 import StarRating from "./StarRating";
 
+const BASE_URL = "https://movieplus-31vd.onrender.com";
+
 function Moviedetails({ currentUser }) {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -13,16 +15,16 @@ function Moviedetails({ currentUser }) {
   const [isFavourite, setIsFavourite] = useState(false);
 
   useEffect(() => {
-    fetch(`https://movieplus-31vd.onrender.com/${id}`)
+    fetch(`${BASE_URL}/movies/${id}`)
       .then((res) => res.json())
       .then((data) => setMovie(data));
 
-    fetch(`https://movieplus-31vd.onrender.com/reviews?movieId=${id}`)
+    fetch(`${BASE_URL}/reviews?movieId=${id}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
 
     if (currentUser) {
-      fetch(`https://movieplus-31vd.onrender.com/favourites?userId=${currentUser.id}&movieId=${id}`)
+      fetch(`${BASE_URL}/favourites?userId=${currentUser.id}&movieId=${id}`)
         .then((res) => res.json())
         .then((data) => setIsFavourite(data.length > 0));
     }
@@ -41,7 +43,7 @@ function Moviedetails({ currentUser }) {
       date: new Date().toISOString().split("T")[0],
     };
 
-    fetch("https://movieplus-31vd.onrender.com/reviews", {
+    fetch(`${BASE_URL}/reviews`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(review),
@@ -58,17 +60,17 @@ function Moviedetails({ currentUser }) {
     if (!currentUser) return alert("Please log in to add favourites.");
 
     if (isFavourite) {
-      fetch(`https://movieplus-31vd.onrender.com/favourites?userId=${currentUser.id}&movieId=${id}`)
+      fetch(`${BASE_URL}/favourites?userId=${currentUser.id}&movieId=${id}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0) {
-            fetch(`https://movieplus-31vd.onrender.com/favourites/${data[0].id}`, {
+            fetch(`${BASE_URL}/favourites/${data[0].id}`, {
               method: "DELETE",
             }).then(() => setIsFavourite(false));
           }
         });
     } else {
-      fetch("https://movieplus-31vd.onrender.com/favourites", {
+      fetch(`${BASE_URL}/favourites`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: currentUser.id, movieId: parseInt(id) }),
@@ -91,10 +93,13 @@ function Moviedetails({ currentUser }) {
           <p><strong>Director:</strong> {movie.director}</p>
           <p><strong>Actors:</strong> {movie.actors}</p>
           <p><strong>Runtime:</strong> {movie.runtime}</p>
-          <p><strong>Rating:</strong>  {movie.rating} / 10</p>
+          <p><strong>Rating:</strong> {movie.rating} / 10</p>
           <p>{movie.plot}</p>
-          <button className={`fav-btn ${isFavourite ? "fav-active" : ""}`} onClick={handleToggleFavourite}>
-            {isFavourite ? " Remove from Favourites" : "Add to Favourites"}
+          <button
+            className={`fav-btn ${isFavourite ? "fav-active" : ""}`}
+            onClick={handleToggleFavourite}
+          >
+            {isFavourite ? "Remove from Favourites" : "Add to Favourites"}
           </button>
         </div>
       </div>
