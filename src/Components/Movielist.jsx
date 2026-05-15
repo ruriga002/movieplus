@@ -6,7 +6,7 @@ function Movielist({ query, genre }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3001/movies")
+    fetch("https://movieplus-31vd.onrender.com/movies")
       .then((res) => res.json())
       .then((data) => {
         setMovies(data);

@@ -7,11 +7,11 @@ function Favourites({ currentUser }) {
   useEffect(() => {
     if (!currentUser) return;
 
-    fetch(`http://localhost:3001/favourites?userId=${currentUser.id}`)
+    fetch(`https://movieplus-31vd.onrender.com/favourites?userId=${currentUser.id}`)
       .then((res) => res.json())
       .then((favs) => {
         const movieFetches = favs.map((fav) =>
-          fetch(`http://localhost:3001/movies/${fav.movieId}`).then((res) => res.json())
+          fetch(`https://movieplus-31vd.onrender.com/${fav.movieId}`).then((res) => res.json())
         );
         Promise.all(movieFetches).then((movies) => setFavouriteMovies(movies));
       });

@@ -13,16 +13,16 @@ function Moviedetails({ currentUser }) {
   const [isFavourite, setIsFavourite] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/movies/${id}`)
+    fetch(`https://movieplus-31vd.onrender.com/${id}`)
       .then((res) => res.json())
       .then((data) => setMovie(data));
 
-    fetch(`http://localhost:3001/reviews?movieId=${id}`)
+    fetch(`https://movieplus-31vd.onrender.com/reviews?movieId=${id}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
 
     if (currentUser) {
-      fetch(`http://localhost:3001/favourites?userId=${currentUser.id}&movieId=${id}`)
+      fetch(`https://movieplus-31vd.onrender.com/favourites?userId=${currentUser.id}&movieId=${id}`)
         .then((res) => res.json())
         .then((data) => setIsFavourite(data.length > 0));
     }
@@ -41,7 +41,7 @@ function Moviedetails({ currentUser }) {
       date: new Date().toISOString().split("T")[0],
     };
 
-    fetch("http://localhost:3001/reviews", {
+    fetch("https://movieplus-31vd.onrender.com/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(review),
@@ -58,17 +58,17 @@ function Moviedetails({ currentUser }) {
     if (!currentUser) return alert("Please log in to add favourites.");
 
     if (isFavourite) {
-      fetch(`http://localhost:3001/favourites?userId=${currentUser.id}&movieId=${id}`)
+      fetch(`https://movieplus-31vd.onrender.com/favourites?userId=${currentUser.id}&movieId=${id}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0) {
-            fetch(`http://localhost:3001/favourites/${data[0].id}`, {
+            fetch(`https://movieplus-31vd.onrender.com/favourites/${data[0].id}`, {
               method: "DELETE",
             }).then(() => setIsFavourite(false));
           }
         });
     } else {
-      fetch("http://localhost:3001/favourites", {
+      fetch("https://movieplus-31vd.onrender.com/favourites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: currentUser.id, movieId: parseInt(id) }),
